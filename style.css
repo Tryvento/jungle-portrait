@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #11771e;
+    --secondary-color: #d6fdd6;
+    --tertiary-color: #1a1a1a;
+
+    --font-family: 'Poppins', sans-serif;
+
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--tertiary-color) 0%, var(--tertiary-color) 50%, var(--primary-color) 100%);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+header {
+    width: 100dvw;
+    height: 100px;
+}
+
+header h1 {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+
+}
+
+.phones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Subtract header height */
+    width: 100%;
+    position: relative; /* For absolute positioned phones */
+    gap: var(--space-lg);
+}
+
+.phone {
+    width: 100%; /* Full width for better visibility */
+    max-width: 600px; /* Maximum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: absolute; /* Stack phones on top of each other */
+    gap: var(--space-xl);
+}
+
+/* Container for all phone visuals - fixed height */
+.phone-visuals-container {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Increased height for visual area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-info {
+    display: flex;
+    transform: translateY(80px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.phone.active {
+    opacity: 1;
+}
+
+.phone-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px; /* Increased base width for phone visual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) contrast(.9);
+}
+
+.phone-visual-back {
+    width: 700px; /* Scaled width for back phones (2x) */
+    transform: translate(-50%, -50%) translateX(6px);
+}
+
+.phone-visual.active {
+    opacity: 1;
+}
+
+/* The Phone Border/Frame */
+.phone-visual > img:not(.phone-wallpaper) {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+/* The Wallpaper */
+.phone-wallpaper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Estimated width to fit inside borders */
+    height: 96%; /* Estimated height to fit inside borders */
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 35px; /* Adjust to match phone corners */
+}
+
+.phone h2, .phone p {
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    text-align: center;
+    z-index: 20; /* Ensure text is above everything */
+    margin: var(--space-xs) 0;
+}
+
+.phone h2 {
+    font-size: 2.5rem; /* Larger title */
+    font-weight: bold;
+}
+
+.phone p {
+    font-size: 1.6rem; /* Larger price */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-style: italic;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
