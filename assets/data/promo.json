@@ -1,0 +1,22 @@
+[
+  {
+    "src": "/assets/img/marketing/promo-1.jpeg",
+    "alt": "Promo 1",
+    "type": "image"
+  },
+  {
+    "src": "/assets/img/marketing/promo-2.png",
+    "alt": "Promo 2",
+    "type": "image"
+  },
+  {
+    "src": "/assets/img/marketing/promo-3.png",
+    "alt": "Promo 3",
+    "type": "image"
+  },
+  {
+    "src": "/assets/img/marketing/promo-4.mp4",
+    "alt": "Promo 4",
+    "type": "video"
+  }
+]

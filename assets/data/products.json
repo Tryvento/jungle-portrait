@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "iphone-11",
+      "name": "Apple iPhone 11",
+      "price": "$900.000",
+      "images": {
+        "front": "/assets/img/Phones/iph-11/apple-iphone-11-front.png",
+        "back": "/assets/img/Phones/iph-11/apple-iphone-11-double.png",
+        "wallpaper": "/assets/img/marketing/logo.jpeg"
+      },
+      "folder": "iph-11"
+    },
+    {
+      "id": "iphone-13",
+      "name": "Apple iPhone 13",
+      "price": "$1'500.000",
+      "images": {
+        "front": "/assets/img/Phones/iph-13/apple-iphone-13-front.png",
+        "back": "/assets/img/Phones/iph-13/apple-iphone-13-double.png",
+        "wallpaper": "/assets/img/marketing/logo.jpeg"
+      },
+      "folder": "iph-13"
+    },
+    {
+      "id": "iphone-14-pro",
+      "name": "Apple iPhone 14 pro",
+      "price": "$2'500.000",
+      "images": {
+        "front": "/assets/img/Phones/iph-14-pro/apple-iphone-14-pro-front.png",
+        "back": "/assets/img/Phones/iph-14-pro/apple-iphone-14-pro-double.png",
+        "wallpaper": "/assets/img/marketing/logo.jpeg"
+      },
+      "folder": "iph-14-pro"
+    }
+  ]
+}

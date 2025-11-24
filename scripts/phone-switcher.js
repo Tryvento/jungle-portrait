@@ -1,10 +1,17 @@
 // Phone Carousel System
 // Cycles through .phone elements and their .phone-visual children
 
-document.addEventListener('DOMContentLoaded', () => {
+// Wait for phones to be loaded by phone-manager.js
+document.addEventListener('phonesLoaded', () => {
+    console.log('Phone switcher: phones loaded event received');
     const phones = document.querySelectorAll('.phone');
     
-    if (phones.length === 0) return;
+    if (phones.length === 0) {
+        console.warn('Phone switcher: No phones found after phonesLoaded event');
+        return;
+    }
+    
+    console.log('Phone switcher: Found', phones.length, 'phones');
     
     let currentPhoneIndex = 0;
     const phoneVisualIntervals = new Map(); // Store interval IDs for each phone
