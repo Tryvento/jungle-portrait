@@ -18,5 +18,10 @@
     "src": "/assets/img/marketing/promo-4.mp4",
     "alt": "Promo 4",
     "type": "video"
+  },
+  {
+    "src": "assets/img/marketing/WhatsApp Image 2025-11-23 at 23.13.53.jpeg",
+    "alt": "Promo 1",
+    "type": "image"
   }
 ]

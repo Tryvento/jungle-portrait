@@ -25,13 +25,13 @@
     {
       "id": "iphone-14-pro",
       "name": "Apple iPhone 14 pro",
-      "price": "$2'500.000",
+      "price": "$2'600.000",
+      "folder": "iph-14-pro",
       "images": {
         "front": "/assets/img/Phones/iph-14-pro/apple-iphone-14-pro-front.png",
         "back": "/assets/img/Phones/iph-14-pro/apple-iphone-14-pro-double.png",
         "wallpaper": "/assets/img/marketing/logo.jpeg"
-      },
-      "folder": "iph-14-pro"
+      }
     }
   ]
 }
